@@ -1,4 +1,6 @@
 Feature:
+
+  @smoke
   Scenario Outline:Retrieve data from the API
     Given the API endpoint '/v1/data'
     When  the response status code should be 200

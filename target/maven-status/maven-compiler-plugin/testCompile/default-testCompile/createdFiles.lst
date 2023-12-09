@@ -1,2 +1,2 @@
 Runner\TestRunner.class
-stepdefinitions\GetRequestStep.class
+stepDefinitions\GetRequestStep.class

@@ -1,10 +1,9 @@
-package stepdefinitions;
+package stepDefinitions;
 
 
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
 import io.restassured.RestAssured;
 
 import io.restassured.path.json.JsonPath;
@@ -26,7 +25,7 @@ public class GetRequestStep extends Helper {
 
 
     @Given("the API endpoint {string}")
-    public void theAPIEndpoint(String endpoint) throws URISyntaxException {
+    public void sendGetRequest(String endpoint) throws URISyntaxException {
         Helper.init();
         RestAssured.baseURI = prop.getProperty("BASE_URL");
         //System.out.println(prop.getProperty("BASE_URL"));
@@ -38,19 +37,19 @@ public class GetRequestStep extends Helper {
 
 
     @Then("the response status code should be {int}")
-    public void theResponseStatusCodeShouldBe(int expectedStatusCode) {
+    public void verifyStatusCode(int expectedStatusCode) {
         int actualResponseCode = response.then().extract().statusCode();
         assertEquals(expectedStatusCode,actualResponseCode);
     }
 
     @Then("the response should contain {string} {string}")
-    public void theResponseShouldContain(String fieldName,String expectedText) {
+    public void verifyResponseContainsData(String fieldName,String expectedText) {
         assertTrue(response.getBody().asString().contains(expectedText));
     }
 
 
     @Then("the response should contain the latest COVID-19 {string}")
-    public void the_response_should_contain_the_latest_covid( String date) {
+    public void verifyResponseContainLatestCovidCases( String date) {
         JsonPath jsonPath = response.jsonPath();
 
         int count = jsonPath.getInt("data.size()");
@@ -70,7 +69,7 @@ public class GetRequestStep extends Helper {
 
     }
     @Then("the error message should be {string}")
-    public void the_error_message_should_be(String expectedErrorMessage) {
+    public void verifyErrorMessage(String expectedErrorMessage) {
         String responseBody = this.response.getBody().asString();
         assertTrue(responseBody.contains(expectedErrorMessage));
 

@@ -3,152 +3,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2023-12-09T17:09:31.376Z",
-        "line": 11,
-        "name": "Retrieve data from the API",
-        "description": "",
-        "id": ";retrieve-data-from-the-api;;2",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 1573000000,
-              "status": "passed"
-            },
-            "line": 5,
-            "name": "the API endpoint \u0027/v1/data\u0027",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\u0027/v1/data\u0027",
-                  "offset": 17
-                }
-              ],
-              "location": "stepDefinitions.GetRequestStep.theAPIEndpoint(java.lang.String)"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 16000000,
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "the response status code should be 200",
-            "match": {
-              "arguments": [
-                {
-                  "val": "200",
-                  "offset": 35
-                }
-              ],
-              "location": "stepDefinitions.GetRequestStep.theResponseStatusCodeShouldBe(int)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "the response should contain \u0027areaCode\u0027 \u0027K02000001\u0027",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\u0027areaCode\u0027",
-                  "offset": 28
-                },
-                {
-                  "val": "\u0027K02000001\u0027",
-                  "offset": 39
-                }
-              ],
-              "location": "stepDefinitions.GetRequestStep.theResponseShouldContain(java.lang.String,java.lang.String)"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@smoke"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2023-12-09T17:09:33.029Z",
-        "line": 12,
-        "name": "Retrieve data from the API",
-        "description": "",
-        "id": ";retrieve-data-from-the-api;;3",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 157000000,
-              "status": "passed"
-            },
-            "line": 5,
-            "name": "the API endpoint \u0027/v1/data\u0027",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\u0027/v1/data\u0027",
-                  "offset": 17
-                }
-              ],
-              "location": "stepDefinitions.GetRequestStep.theAPIEndpoint(java.lang.String)"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "the response status code should be 200",
-            "match": {
-              "arguments": [
-                {
-                  "val": "200",
-                  "offset": 35
-                }
-              ],
-              "location": "stepDefinitions.GetRequestStep.theResponseStatusCodeShouldBe(int)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "the response should contain \u0027areaName\u0027 \u0027United Kingdom\u0027",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\u0027areaName\u0027",
-                  "offset": 28
-                },
-                {
-                  "val": "\u0027United Kingdom\u0027",
-                  "offset": 39
-                }
-              ],
-              "location": "stepDefinitions.GetRequestStep.theResponseShouldContain(java.lang.String,java.lang.String)"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@smoke"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2023-12-09T17:09:33.186Z",
+        "start_timestamp": "2023-12-10T10:51:32.327Z",
         "line": 21,
         "name": "Get latest covid cases for given date",
         "description": "",
@@ -158,7 +13,7 @@
         "steps": [
           {
             "result": {
-              "duration": 110000000,
+              "duration": 1595443000,
               "status": "passed"
             },
             "line": 16,
@@ -170,13 +25,13 @@
                   "offset": 17
                 }
               ],
-              "location": "stepDefinitions.GetRequestStep.theAPIEndpoint(java.lang.String)"
+              "location": "GetRequestStep.sendGetRequest(String)"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 16000000,
+              "duration": 12643700,
               "status": "passed"
             },
             "line": 17,
@@ -188,13 +43,13 @@
                   "offset": 35
                 }
               ],
-              "location": "stepDefinitions.GetRequestStep.theResponseStatusCodeShouldBe(int)"
+              "location": "GetRequestStep.verifyStatusCode(int)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 4656000000,
+              "duration": 4217911300,
               "status": "passed"
             },
             "line": 18,
@@ -206,14 +61,19 @@
                   "offset": 48
                 }
               ],
-              "location": "stepDefinitions.GetRequestStep.the_response_should_contain_the_latest_covid(java.lang.String)"
+              "location": "GetRequestStep.verifyResponseContainLatestCovidCases(String)"
             },
             "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Regression"
           }
         ]
       },
       {
-        "start_timestamp": "2023-12-09T17:09:37.968Z",
+        "start_timestamp": "2023-12-10T10:51:38.163Z",
         "line": 22,
         "name": "Get latest covid cases for given date",
         "description": "",
@@ -223,7 +83,7 @@
         "steps": [
           {
             "result": {
-              "duration": 283000000,
+              "duration": 210256400,
               "status": "passed"
             },
             "line": 16,
@@ -235,12 +95,13 @@
                   "offset": 17
                 }
               ],
-              "location": "stepDefinitions.GetRequestStep.theAPIEndpoint(java.lang.String)"
+              "location": "GetRequestStep.sendGetRequest(String)"
             },
             "keyword": "Given "
           },
           {
             "result": {
+              "duration": 279200,
               "status": "passed"
             },
             "line": 17,
@@ -252,13 +113,13 @@
                   "offset": 35
                 }
               ],
-              "location": "stepDefinitions.GetRequestStep.theResponseStatusCodeShouldBe(int)"
+              "location": "GetRequestStep.verifyStatusCode(int)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 3220000000,
+              "duration": 2954604900,
               "status": "passed"
             },
             "line": 18,
@@ -270,9 +131,14 @@
                   "offset": 48
                 }
               ],
-              "location": "stepDefinitions.GetRequestStep.the_response_should_contain_the_latest_covid(java.lang.String)"
+              "location": "GetRequestStep.verifyResponseContainLatestCovidCases(String)"
             },
             "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Regression"
           }
         ]
       }
@@ -282,80 +148,6 @@
     "id": "",
     "keyword": "Feature",
     "uri": "file:src/test/java/features/CoronaVirusGetCall.feature",
-    "tags": []
-  },
-  {
-    "line": 1,
-    "elements": [
-      {
-        "start_timestamp": "2023-12-09T17:09:41.471Z",
-        "line": 3,
-        "name": "Requesting COVID-19 data for an invalid area",
-        "description": "",
-        "id": "retrieve-covid-19-data-for-an-invalid-area;requesting-covid-19-data-for-an-invalid-area",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 141000000,
-              "status": "passed"
-            },
-            "line": 4,
-            "name": "the API endpoint \"/v2/data/invalid\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"/v2/data/invalid\"",
-                  "offset": 17
-                }
-              ],
-              "location": "stepDefinitions.GetRequestStep.theAPIEndpoint(java.lang.String)"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 5,
-            "name": "the response status code should be 404",
-            "match": {
-              "arguments": [
-                {
-                  "val": "404",
-                  "offset": 35
-                }
-              ],
-              "location": "stepDefinitions.GetRequestStep.theResponseStatusCodeShouldBe(int)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "the error message should be \"Resource not found\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Resource not found\"",
-                  "offset": 28
-                }
-              ],
-              "location": "stepDefinitions.GetRequestStep.the_error_message_should_be(java.lang.String)"
-            },
-            "keyword": "Then "
-          }
-        ]
-      }
-    ],
-    "name": "Retrieve COVID-19 data for an invalid area",
-    "description": "",
-    "id": "retrieve-covid-19-data-for-an-invalid-area",
-    "keyword": "Feature",
-    "uri": "file:src/test/java/features/InvalidCovoidData.feature",
     "tags": []
   }
 ]

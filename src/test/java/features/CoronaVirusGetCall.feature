@@ -1,4 +1,4 @@
-Feature:
+Feature:Retrieve COVID-19 data for an valid data
 
   @smoke
   Scenario Outline:Retrieve data from the API
@@ -11,7 +11,7 @@ Feature:
     |'areaCode'| 'K02000001'        |
     |'areaName'| 'United Kingdom'   |
 
-
+    @Regression
     Scenario Outline: Get latest covid cases for given date
       Given the API endpoint '/v1/data'
       When  the response status code should be 200
